@@ -1,5 +1,5 @@
 <template>
-  <h1>In development</h1>
+  <h1 class="mt-16 font-sans text-4xl">In development</h1>
 </template>
 
 <script>
