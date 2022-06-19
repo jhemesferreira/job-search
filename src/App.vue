@@ -1,9 +1,13 @@
 <template>
-  <h1 class="mt-16 font-sans text-4xl">In development</h1>
+  <MainNav />
 </template>
 
 <script>
+import MainNav from "@/components/MainNav.vue";
 export default {
   name: "App",
+  components: {
+    MainNav,
+  },
 };
 </script>
