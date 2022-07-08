@@ -13,6 +13,20 @@
         <a href="" class="font-bold flex items-center h-full text-xl">{{
           company
         }}</a>
+        <nav class="h-full ml-20">
+          <ul class="h-full flex justify-between items-center gap-x-10">
+            <li
+              v-for="(link, index) in listNavLinks"
+              :key="link.title + '-' + index"
+              class="h-full flex justify-between items-center"
+              data-test="main-nav-list-item"
+            >
+              <a class="h-full flex items-center" :href="link.url">{{
+                link.title
+              }}</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -24,6 +38,28 @@ export default {
   data() {
     return {
       company: "Bobo Careers",
+      listNavLinks: [
+        {
+          title: "Teams",
+          url: "",
+        },
+        {
+          title: "Locations",
+          url: "",
+        },
+        {
+          title: "Benefits",
+          url: "",
+        },
+        {
+          title: "Jobs",
+          url: "",
+        },
+        {
+          title: "Students",
+          url: "",
+        },
+      ],
     };
   },
 };
