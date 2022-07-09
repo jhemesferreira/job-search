@@ -27,14 +27,28 @@
             </li>
           </ul>
         </nav>
+        <div class="flex items-center h-full ml-auto">
+          <ActionButton
+            v-if="!isLoggedIn"
+            data-test="action-button"
+            @click="isLoggedIn = true"
+          />
+          <ProfileImage v-else data-test="profile-image" />
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import ActionButton from "@/components/ActionButton.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
 export default {
   name: "MainNav",
+  components: {
+    ActionButton,
+    ProfileImage,
+  },
   data() {
     return {
       company: "Bobo Careers",
@@ -60,6 +74,7 @@ export default {
           url: "",
         },
       ],
+      isLoggedIn: false,
     };
   },
 };
