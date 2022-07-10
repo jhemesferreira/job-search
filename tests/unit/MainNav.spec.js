@@ -6,11 +6,11 @@ describe("MainNav", () => {
   beforeAll(() => {
     wrapper = mount(MainNav);
   });
-  it("display compay name", () => {
+  it("display company name", () => {
     expect(wrapper.text()).toMatch("Bobo Careers");
   });
 
-  it("display menu item for navgation", async () => {
+  it("display menu item for navigation", async () => {
     await wrapper.setData({
       listNavLinks: [
         {

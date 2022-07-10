@@ -30,6 +30,8 @@
         <div class="flex items-center h-full ml-auto">
           <ActionButton
             v-if="!isLoggedIn"
+            title="Sign in"
+            type="primary"
             data-test="action-button"
             @click="isLoggedIn = true"
           />
