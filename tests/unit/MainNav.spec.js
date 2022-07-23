@@ -1,10 +1,10 @@
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import MainNav from "@/components/MainNav.vue";
 
 describe("MainNav", () => {
   let wrapper;
   beforeAll(() => {
-    wrapper = mount(MainNav);
+    wrapper = shallowMount(MainNav);
   });
   it("display company name", () => {
     expect(wrapper.text()).toMatch("Bobo Careers");
