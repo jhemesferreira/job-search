@@ -2,7 +2,7 @@ TN:
 SF:src/assets/images/avatar.jpg
 FNF:0
 FNH:0
-DA:1,1
+DA:1,2
 LF:1
 LH:1
 BRF:0
@@ -28,7 +28,7 @@ TN:
 SF:src/components/ProfileImage.vue
 FNF:0
 FNH:0
-DA:10,1
+DA:10,2
 LF:1
 LH:1
 BRF:0
@@ -36,12 +36,12 @@ BRH:0
 end_of_record
 TN:
 SF:src/components/Subnav.vue
-FN:21,(anonymous_0)
+FN:20,(anonymous_0)
 FNF:1
 FNH:1
 FNDA:1,(anonymous_0)
-DA:19,2
-DA:22,1
+DA:18,2
+DA:21,1
 LF:2
 LH:2
 BRF:0
