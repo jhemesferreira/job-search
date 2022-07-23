@@ -31,21 +31,35 @@ describe("MainNav", () => {
 
   describe("when user is logged out", () => {
     it("display button sign in", () => {
-      const siginButton = wrapper.find("[data-test='action-button']");
+      const signinButton = wrapper.find("[data-test='action-button']");
 
-      expect(siginButton.exists()).toBe(true);
+      expect(signinButton.exists()).toBe(true);
     });
   });
 
   describe("when user is logged in", () => {
     it("display profile image when clicking in sign in button", async () => {
-      const siginButton = wrapper.find("[data-test='action-button']");
+      const signinButton = wrapper.find("[data-test='action-button']");
 
-      await siginButton.trigger("click");
+      await signinButton.trigger("click");
 
       const profileImage = wrapper.find("[data-test='profile-image']");
 
       expect(profileImage.exists()).toBe(true);
+    });
+    it("display subnavgation menu with additional information", async () => {
+      await wrapper.setData({
+        isLoggedIn: false,
+      });
+      let subnav = wrapper.find("[data-test='subnav']");
+      expect(subnav.exists()).toBe(false);
+
+      const signinButton = wrapper.find("[data-test='action-button']");
+
+      await signinButton.trigger("click");
+
+      subnav = wrapper.find("[data-test='subnav']");
+      expect(subnav.exists()).toBe(true);
     });
   });
 });
